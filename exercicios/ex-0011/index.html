@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <h1>Qual país voce esta ? </h1>  
+  <input type="text" name="pais" id="pais">
+  <input type="submit" value="verificar" onclick="calcular()">
+  <div id="res">
+
+  </div>
+  <script>
+   function calcular () {
+    var pais = document.getElementById('pais').value
+    var res = document.getElementById('res')
+    res.innerHTML =`voce esta viajando ${pais}`
+    if (pais == 'brasil' ) {
+        res.innerHTML += `<p>voce está no melhor país do mundo<p>`
+    }
+    else {
+        res.innerHTML += `<p> voce esta viajando em outros países <p>`
+    
+   }
+}
+
+  </script>
+</body>
+</html>
